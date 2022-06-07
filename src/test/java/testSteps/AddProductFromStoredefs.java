@@ -99,4 +99,8 @@ public class AddProductFromStoredefs {
         throw new io.cucumber.java.PendingException();
     }
 
+    @Given("this is the failed step")
+    public void thisIsTheFailedStep() {
+        Assert.fail();
+    }
 }
