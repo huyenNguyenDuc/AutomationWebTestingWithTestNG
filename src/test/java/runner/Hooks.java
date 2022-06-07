@@ -3,6 +3,8 @@ package runner;
 import context.TestContext;
 import factory.DriverFactory;
 import io.cucumber.java.*;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 public class Hooks {
@@ -48,11 +50,15 @@ public class Hooks {
     }
 
     @After (order = 1)
-    public static void afterHook1(Scenario scenario){
+    public void afterHook1(Scenario scenario){
         System.out.print("\nHere is AFTER HOOK 1 on Hooks Class");
         scenario.getName();
         scenario.getStatus();
-        scenario.isFailed();
+        if(scenario.isFailed()){
+            final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot, "image/png", scenario.getName());
+        //(screenshot, "image/png");
+        }
     }
     //run after hook with: @Tag >> order = 1 >> run order = 0. CONTRARY TO BEFORE HOOK
     @After (order = 0)

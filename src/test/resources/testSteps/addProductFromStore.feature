@@ -15,6 +15,10 @@ Feature: Add to cart
       Then I see number of 2 quantity in the cart
       When I have already added quantities
 
+    Scenario: take screenshot for the failed test case
+      Given this is the failed step
+
+
 
 #
 #
