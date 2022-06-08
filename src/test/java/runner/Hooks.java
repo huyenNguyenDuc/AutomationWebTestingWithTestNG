@@ -23,7 +23,7 @@ public class Hooks {
     // run before each scenario, for scenario outline, run before its example.
     @Before (order = 0)
     public void beforeHook0(){
-        System.out.print("\nHere is BEFORE HOOK 0 on Hooks Class");
+        System.out.print("\nHere is BEFORE HOOK 0 on Hooks Class and run the THREAD ID: " + Thread.currentThread().getId());
         // set default browser is chrome
         driver = DriverFactory.initializerDriver(System.getProperty("browser", "chrome"));
         context.driver = driver;
