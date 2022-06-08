@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="MakerSuite" parallel="classes" thread-count = "1" data-provider-thread-count ="2">
+
+    <!-- thread-count * data-provider-thread-count = number of threads will be created to run each classes|test|methods tag
+      e.x: thread-count = 1, data-provider-thread-count= 2, parallel = tests: create 2 threads to run parallel for a <test> tag
+        thread-count = 1, data-provider-thread-count= 2, parallel = classes: create 2 threads to run parallel for each <class> tag -->
+
+    <test name="Test01" enabled="true" parallel="tests" thread-count = "1" >
+        <classes >
+            <class name="runner.TestNGRunnerTest"/>
+            <class name="runner.TestNGRunnerTesting"/>
+        </classes>
+    </test>
+
+
+</suite>

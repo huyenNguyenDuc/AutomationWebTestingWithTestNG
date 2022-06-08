@@ -9,11 +9,12 @@ import io.cucumber.java.en.When;
 import objects.Product;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 import pages.CartPage;
 import pages.CheckoutPage;
 import pages.PageFactoryManager;
 import pages.StorePage;
-
+@Test
 public class AddProductFromStoredefs {
     private StorePage storePage;
     private CartPage cartPage;
@@ -24,8 +25,6 @@ public class AddProductFromStoredefs {
         storePage = PageFactoryManager.getStorePage(context.driver);
         cartPage = PageFactoryManager.getCartPage(context.driver);
     }
-
-
 
     @Given("I'm on the Store page")
     public void i_m_on_the_store_page() {
