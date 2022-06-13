@@ -11,7 +11,8 @@ import org.testng.annotations.DataProvider;
         // Run test with maven command:
         // mvn clean test -Dcucumber.filter.tags=@testing
         // link for more details: https://cucumber.io/docs/cucumber/api/
-        plugin = {"pretty", "html:src/report/cucumber-report.html"}, tags = "@testing",
+        plugin = {"pretty", "html:src/report/cucumber-report.html",
+                "json:target/cucumber-reports/CucumberTestReport.json"}, tags = "@testing",
         //monochrome = true,
         glue = {"testSteps", "runner", "objects", "customtype", "constants"},
         features = "src/test/resources/testSteps"
