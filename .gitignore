@@ -1,5 +1,5 @@
 .idea
-target
+target/**
 .gitignore
- src/report
- README.md
+src/report/**
+README.md

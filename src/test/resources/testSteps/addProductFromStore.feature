@@ -1,5 +1,5 @@
 @testing
-Feature: Add to cart
+Feature: Add Product From Store
 
   Rule: Add from Store page
     Background:
