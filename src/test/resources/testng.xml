@@ -10,8 +10,8 @@
 
     <test name="Test01" enabled="true" parallel="tests" thread-count = "1" >
         <classes >
-            <class name="runner.TestNGRunnerTest"/>
             <class name="runner.TestNGRunnerTesting"/>
+            <class name="runner.TestFailureRunner"/>
         </classes>
     </test>
 
