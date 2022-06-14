@@ -3,3 +3,4 @@ target/**
 .gitignore
 src/report/**
 README.md
+src/report/cucumber-report.html
