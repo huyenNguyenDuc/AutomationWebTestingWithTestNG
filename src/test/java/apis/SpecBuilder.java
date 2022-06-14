@@ -10,7 +10,7 @@ import utils.ConfigLoader;
 public class SpecBuilder {
     public static RequestSpecification getRequestSpec(){
         return new RequestSpecBuilder().
-                // store the URL in local.properties file in link src/test/resources/
+                // store the URL in config.properties file in link src/test/resources/
                 setBaseUri(ConfigLoader.getInstance().getProperty("baseURL")).
                 log(LogDetail.ALL).
                 build();
